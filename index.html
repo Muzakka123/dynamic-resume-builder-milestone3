@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dynamic Resume Builder</title>
+</head>
+<body>
+    <div class="resume-builder-container">
+        <div class="form-container">
+            <h1 class="main-title">Resume Builder</h1>
+            <p class="intro-description">Craft your professional resume effortlessly. Fill in your details below to get started!</p>
+            
+            <h2 class="section-heading">Basic Information</h2>
+           
+            
+            <label for="nameInput">Name:</label>
+            <input type="text" id="nameInput" placeholder="Enter your name">
+
+            <label for="titleInput">Title:</label>
+            <input type="text" id="titleInput" placeholder="Enter your job title">
+
+            <label for="emailInput">Email:</label>
+            <input type="email" id="emailInput" placeholder="Enter your email">
+
+            <label for="phoneInput">Phone:</label>
+            <input type="text" id="phoneInput" placeholder="Enter your phone number">
+
+            <label for="addressInput">Address:</label>
+            <input type="text" id="addressInput" placeholder="Enter your address">
+
+            <h2>Professional Summary</h2>
+            <textarea id="summaryInput" placeholder="Write a brief summary about yourself..."></textarea>
+
+            <h2>Experience</h2>
+            <div id="experienceContainer">
+                <div class="experience-item">
+                    <label for="jobTitleInput">Job Title:</label>
+                    <input type="text" class="jobTitleInput" placeholder="Enter job title">
+
+                    <label for="companyInput">Company Name:</label>
+                    <input type="text" class="companyInput" placeholder="Enter company name">
+
+                    <label for="durationInput">Duration:</label>
+                    <input type="text" class="durationInput" placeholder="e.g., Jan 2020 - Dec 2021">
+
+                    <label for="responsibilitiesInput">Responsibilities:</label>
+                    <textarea class="responsibilitiesInput" placeholder="Describe your responsibilities..."></textarea>
+                </div>
+            </div>
+            <button class="add-button" onclick="addExperience()">Add More Experience</button>
+
+            <h2>Skills</h2>
+            <input type="text" id="skillsInput" placeholder="Enter skills, comma-separated">
+
+            <h2>Languages</h2>
+            <input type="text" id="languagesInput" placeholder="Enter languages spoken, comma-separated">
+
+            <h2>Hobbies</h2>
+            <input type="text" id="hobbiesInput" placeholder="Enter your hobbies, comma-separated">
+
+            <h2>Certifications and Awards</h2>
+            <textarea id="certificationsInput" placeholder="List certifications and awards..."></textarea>
+
+            <h2>Projects</h2>
+            <textarea id="projectsInput" placeholder="Describe your projects..."></textarea>
+
+            <button class="generate-button" onclick="generateResume()">Generate Resume</button>
+        </div>
+
+        <div class="resume-container" id="resumeContainer" style="display: none;">
+            <header class="header">
+                <h1 id="displayName"></h1>
+                <p class="title" id="displayTitle"></p>
+                <p class="contact-info">
+                    <span id="displayAddress"></span> |
+                    <span id="displayPhone"></span> |
+                    <a href="#" id="displayEmail"></a>
+                </p>
+            </header>
+
+            <div class="content">
+                <section class="section">
+                    <h2>Professional Summary</h2>
+                    <p id="displaySummary"></p>
+                </section>
+
+                <section class="section">
+                    <h2>Experience</h2>
+                    <div id="displayExperience"></div>
+                </section>
+
+                <section class="section">
+                    <h2>Skills</h2>
+                    <ul id="displaySkills"></ul>
+                </section>
+
+                <section class="section">
+                    <h2>Languages</h2>
+                    <p id="displayLanguages"></p>
+                </section>
+
+                <section class="section">
+                    <h2>Hobbies</h2>
+                    <p id="displayHobbies"></p>
+                </section>
+
+                <section class="section">
+                    <h2>Certifications and Awards</h2>
+                    <p id="displayCertifications"></p>
+                </section>
+
+                <section class="section">
+                    <h2>Projects</h2>
+                    <p id="displayProjects"></p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
